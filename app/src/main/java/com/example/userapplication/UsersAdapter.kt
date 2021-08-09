@@ -1,5 +1,6 @@
 package com.example.userapplication // ktlint-disable filename
 
+import android.content.ClipData
 import android.content.Intent
 import android.net.Uri
 import android.view.LayoutInflater
@@ -9,8 +10,20 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewbinding.ViewBinding
 
 class UsersAdapter(private val users: ArrayList<Field>) : RecyclerView.Adapter<UsersAdapter.ViewHolder>() {
+
+    var items: List<Item> = emptyList()
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
+    lateinit var prnt: ViewGroup
+    // lateinit var headerBinding : ItemHeaderBinding
+    lateinit var listener : View.OnClickListener
+    var clicked = false
+
     companion object {
         private const val PROJECT_INFO = 1
         private const val SKILLS_FILTER = 2

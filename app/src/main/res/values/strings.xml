@@ -6,4 +6,5 @@
     <string name="project_info_header">О проекте</string>
     <string name="project_description">1. Маршрутизатор прогулок, в котором вы можете найти оптимальный маршрут как по времени, так и по стоимости и удобству. 2. Приложение для записи в частную клинику, в котором реализован свой ассистент. </string>
     <string name="skills_filter_header">Навыки</string>
+    <string name="filter_title">Фильтр</string>
 </resources>

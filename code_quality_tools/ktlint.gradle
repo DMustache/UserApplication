@@ -23,3 +23,4 @@ task ktlintFormat(type: JavaExec, group: "verification") {
     main = "com.pinterest.ktlint.Main"
     classpath = configurations.ktlint
     args = ["-F", "--disabled_rules=no-multi-spaces,package-name", "src/main/**/*.kt"]
+}
